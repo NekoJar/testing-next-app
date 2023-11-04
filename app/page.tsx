@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <main>
       <h1 className="pb-4">
-        Hello, {session && <span>{session.user!.name}</span>} 👋
+        Hello, {session && <span>{session.user!.name}</span>}👋
       </h1>
       <ProductCard />
     </main>
