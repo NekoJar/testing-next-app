@@ -5,7 +5,6 @@ export default function Home() {
   return (
     <main>
       <h1 className="pb-4">Home</h1>
-      <Link href="users">Users</Link>
       <ProductCard />
     </main>
   );
