@@ -4,8 +4,7 @@ import ProductCard from "./users/components/ProductCard";
 export default function Home() {
   return (
     <main>
-      <h1>Hehlplp</h1>
-
+      <h1 className="pb-4">Home</h1>
       <Link href="users">Users</Link>
       <ProductCard />
     </main>

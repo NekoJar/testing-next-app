@@ -11,7 +11,9 @@ const ProductPage = ({
 }: Props) => {
   return (
     <div>
-      ProductPage {slug} {sortorder}
+      <h1>
+        ProductPage {slug} {sortorder}
+      </h1>
     </div>
   );
 };
