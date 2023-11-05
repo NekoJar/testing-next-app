@@ -1,7 +1,19 @@
+"use client";
 import Image from "next/image";
 import Pizza from "@/public/images/pizza-7.jpeg";
 
-export default async function Home() {
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import _ from "lodash";
+
+// const HeavyComponent = dynamic(() => import("./components/HeavyComponent"), {
+//   ssr: false,
+//   loading: () => <p>Loading...</p>,
+// });
+
+export default function Home() {
+  const [isVisible, setVisible] = useState(false);
+
   return (
     <main className="relative h-screen">
       <Image
@@ -12,6 +24,17 @@ export default async function Home() {
         quality={100}
         priority
       />
+      <button
+        onClick={async () => {
+          const _ = (await import("lodash")).default;
+          const users = [{ name: "c" }, { name: "b" }, { name: "a" }];
+
+          const sorted = _.orderBy(users, ["name"]);
+          console.log(sorted);
+        }}
+      >
+        Show
+      </button>
     </main>
   );
 }
