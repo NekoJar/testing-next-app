@@ -1,10 +1,8 @@
 "use client";
-import Image from "next/image";
 import Pizza from "@/public/images/pizza-7.jpeg";
+import Image from "next/image";
 
 import { useState } from "react";
-import dynamic from "next/dynamic";
-import _ from "lodash";
 
 // const HeavyComponent = dynamic(() => import("./components/HeavyComponent"), {
 //   ssr: false,
